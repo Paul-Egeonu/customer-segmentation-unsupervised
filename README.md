@@ -1,3 +1,6 @@
+
+![stock-photo-customer-segmentation-models-concept-segments-with-colorful-cubes-2220539983](https://github.com/user-attachments/assets/a7a94589-3e1e-41f8-a0b7-251f02549ae1)
+
 # 🧑‍🤝‍🧑 Customer Segmentation with Unsupervised Learning  
 
 ![Python](https://img.shields.io/badge/Python-3.8%2B-blue)  
