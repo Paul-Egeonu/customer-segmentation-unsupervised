@@ -1,9 +1,8 @@
-
 # 🧑‍🤝‍🧑 Customer Segmentation with Unsupervised Learning  
 
 ![Python](https://img.shields.io/badge/Python-3.8%2B-blue)  
-![Scikit-Learn](https://img.shields.io/badge/ML-ScikitLearn-orange)
-![Tableau](https://img.shields.io/badge/Tableau-Visualization-blue?logo=tableau&logoColor=white)
+![Scikit-Learn](https://img.shields.io/badge/ML-ScikitLearn-orange)  
+![Tableau](https://img.shields.io/badge/Tableau-Visualization-blue?logo=tableau&logoColor=white)  
 ![Status](https://img.shields.io/badge/Project-Complete-brightgreen)  
 ![License](https://img.shields.io/badge/License-MIT-lightgrey)  
 
@@ -16,7 +15,9 @@ The insights help businesses tailor marketing strategies, improve retention, and
 
 ```
 customer_segmentation_full_project/
-│── customer_aggregates.csv                # Raw aggregated customer data
+│── data/
+│   └── online_retail_II.csv               # Raw transactional dataset
+│── customer_aggregates.csv                # Aggregated customer features (frequency, recency, monetary)
 │── customer_aggregates_with_clusters.csv  # Final dataset with cluster assignments
 │── kmeans_cluster_profile.csv             # Cluster profile summary
 │── Customer_Segmentation.ipynb            # Original analysis notebook
@@ -33,48 +34,50 @@ customer_segmentation_full_project/
 
 ## 📊 Dataset  
 
-- **File:** `customer_aggregates.csv`  
-- **Description:** Aggregated customer behavioral and transactional features (frequency, monetary value, recency, etc.).  
-- **Unsupervised Goal:** Segment customers into meaningful groups using clustering techniques.  
+- **Raw File:** `online_retail_II.csv` (in the `data/` folder)  
+- **Description:** Transactional data from an online retail store, including invoice, stock code, description, quantity, price, customer ID, and country.  
+- **Goal:** Transform raw transactions into aggregated customer-level features for clustering.  
 
-Processed outputs:  
-- `customer_aggregates_with_clusters.csv` → includes assigned cluster labels  
-- `kmeans_cluster_profile.csv` → cluster-wise summary statistics  
+**Processed Outputs:**  
+- `customer_aggregates.csv` → Aggregated features per customer (recency, frequency, monetary value, etc.)  
+- `customer_aggregates_with_clusters.csv` → Includes assigned cluster labels  
+- `kmeans_cluster_profile.csv` → Summary statistics for each cluster  
 
 ---
 
 ## 🔎 Workflow  
 
 1. **Data Preparation & Exploration**  
-   - Import data and explore feature distributions  
+   - Load raw transactional data (`online_retail_II.csv`)  
+   - Aggregate into customer-level features (RFM metrics)  
    - Handle missing values and outliers  
    - Scale numerical features for clustering  
 
 2. **Clustering (KMeans)**  
    - Applied **KMeans algorithm**  
-   - Determined number of clusters via **Elbow method** and **Silhouette score**  
+   - Determined optimal number of clusters using **Elbow method** and **Silhouette score**  
    - Saved preprocessing pipeline (`scaler_customer_seg.pkl`) and trained model (`kmeans_customer_seg.pkl`)  
 
 3. **Cluster Profiling**  
-   Created descriptive labels for customer groups based on cluster centroids and behavioral metrics:  
+   Descriptive business labels for clusters:  
    - **Cluster 0:** Price-sensitive, low spenders  
    - **Cluster 1:** Loyal, high-value customers  
    - **Cluster 2:** Occasional, moderate engagement  
    - **Cluster 3:** High-frequency, promotion-driven customers  
 
-   📄 See `kmeans_cluster_profile.csv` for details.  
+   📄 See `kmeans_cluster_profile.csv` for detailed stats.  
 
 4. **Visualization (Tableau)**  
-   Interactive dashboard built in Tableau (`Customer_Segmentation.twb`) with:  
+   Interactive dashboard (`Customer_Segmentation.twb`) with:  
    - Cluster size distribution  
-   - Average feature values per cluster  
-   - 2D cluster projection charts  
+   - Feature averages per cluster  
+   - 2D cluster projections  
 
    👉 **[Insert Tableau dashboard screenshots here]**  
 
 5. **Deployment**  
    - `segmentation_app.py`: Python script to predict cluster membership for new customers  
-   - Can be extended into a **Streamlit app** for live customer segmentation  
+   - Can be extended into a **Streamlit app** for interactive use  
 
    👉 **[Insert GIF of Streamlit app here]**  
 
@@ -82,11 +85,12 @@ Processed outputs:
 
 ## 📈 Key Insights  
 
-- Customers can be meaningfully grouped into **4 clusters** with distinct behavioral patterns  
-- High-value and promotion-driven segments present key opportunities for:  
+- Raw retail transactions can be aggregated into **RFM-style features** for segmentation.  
+- Customers can be grouped into **4 meaningful clusters** with distinct behavioral patterns.  
+- Results provide actionable insights for:  
   - Targeted marketing campaigns  
-  - Loyalty programs  
-  - Revenue maximization strategies  
+  - Loyalty rewards programs  
+  - Retention strategies  
 
 ---
 
@@ -120,14 +124,14 @@ Load `Customer_Segmentation.twb` in Tableau Desktop or Tableau Public.
 
 ## 📌 Future Improvements  
 
-- Experiment with **Hierarchical Clustering** and **DBSCAN**  
-- Automate cluster updates with streaming data  
-- Deploy interactive segmentation dashboard (Streamlit + Tableau embedded)  
+- Try **Hierarchical Clustering** and **DBSCAN**  
+- Automate pipeline for live/streaming data  
+- Build full **Streamlit + Tableau embedded dashboard**  
 
 ---
 
 ## 🏆 Author  
 
-**Your Name**  
+**Paul Egeonu**  
 _Data Analyst & Data Scientist_  
-[LinkedIn](https://www.linkedin.com/) | [Portfolio](https://yourportfolio.com) | [GitHub](https://github.com/yourusername)  
+[LinkedIn](https://www.linkedin.com/paul-egeonu) | [Portfolio](https://yourportfolio.com/Paul-Egeonu) | [GitHub](https://github.com/yourusername)  
