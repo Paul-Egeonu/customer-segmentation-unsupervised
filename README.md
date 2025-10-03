@@ -84,6 +84,7 @@ customer_segmentation_full_project/
    - Can be extended into a **Streamlit app** for interactive use  
 
  **STREAMLIT DASHBOARD** 
+ 
 ![CustomerSegmentationDashboard-Personal-MicrosoftEdge2025-10-0312-14-37-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/fda44970-990d-4296-9e77-5ca786bb2728)
 
 ---
