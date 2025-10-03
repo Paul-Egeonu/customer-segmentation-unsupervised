@@ -83,7 +83,8 @@ customer_segmentation_full_project/
    - `segmentation_app.py`: Python script to predict cluster membership for new customers  
    - Can be extended into a **Streamlit app** for interactive use  
 
-   👉 **[Insert GIF of Streamlit app here]**  
+  
+![CustomerSegmentationDashboard-Personal-MicrosoftEdge2025-10-0312-14-37-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/fda44970-990d-4296-9e77-5ca786bb2728)
 
 ---
 
