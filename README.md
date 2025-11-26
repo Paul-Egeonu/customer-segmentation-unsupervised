@@ -139,5 +139,5 @@ Load `Customer_Segmentation.twb` in Tableau Desktop or Tableau Public.
 ## 🏆 Author  
 
 **Paul Egeonu**  
-_Data Analyst & Data Scientist_  
-[LinkedIn](https://www.linkedin.com/paul-egeonu) | [Portfolio](https://yourportfolio.com/Paul-Egeonu) | [GitHub](https://github.com/yourusername)  
+_Data Analyst | Data Scientist_  
+[LinkedIn](https://www.linkedin.com/in/paul-egeonu) | [GitHub](https://github.com/Paul-Egeonu) 
