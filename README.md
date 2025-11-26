@@ -120,7 +120,7 @@ jupyter notebook Customer_Segmentation_portfolio.ipynb
 
 ### 4. Run Prediction Script  
 ```bash
-streamlit ru segmentation_app.py
+streamlit run segmentation_app.py
 ```
 
 ### 5. Open Tableau Dashboard  
